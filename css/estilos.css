@@ -42,6 +42,8 @@ hr{
     margin: 0 auto;
     border: 1px solid #0b5991;
 }
+
+/*--------------------------Estilos para Escritorio-----------------------------*/
 /*estilos del header de la pagina index.html*/
 .header{
     height: 10vh;
@@ -537,6 +539,127 @@ hr{
                     font-size: 1.5rem;  
                 }
 
+            }
+            
+        }
+    }
+}
+
+/*--------------------------Estilos para movil-------------------------------*/
+@media screen and (max-width:768px){
+    /*----estilos de la pagina index.html para movil----*/
+    .header{
+        height: 15vh;
+        .navPrincipal{
+            flex-direction: column;
+            padding-top: 10px;
+            a{
+                font-size: 1.4rem;
+            }
+            .listNav{
+                a{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .sectionTitulos{
+        height: 85vh;
+        .contenedorTitulos{
+            h1{
+                font-size: 3rem;
+            }
+            h2{
+                font-size: 1.5rem;
+            }
+            .btnRegistrarse{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .busqueda{
+        height: 40vh;
+        div{
+            h2{
+                font-size: 2rem;
+            }
+            .formBusqueda{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .txtBusqueda{
+                    width: 400px;
+                    height: 3rem;
+                    /*margin-right: 15px;*/
+                    border-radius: 20px;
+                    font-size: 1.3rem;
+                    border: none;
+                    /*padding-left: 10px;*/
+                }
+                .btnBuscar{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .peliculasTendencias{
+        h2{
+            font-size: 2rem;
+        }
+    }
+    .footer{
+        ul{
+            gap: 10px;
+            a{
+                font-size: 0.8rem;
+            }
+        }
+        .flechaArriba{
+            bottom: 50px;
+            right: 0px;
+        }
+    }
+
+    /*----Estilos para la pagina iniciosesion.html para moviles-----*/
+    .mainIniciosesion{
+        height: 75vh;
+        .divIniciosesion{
+            width: 80%;
+            h1{
+                font-size: 2rem;
+            }
+            .formIniciosesion{
+                .txtEmail, .txtPassword{
+                    font-size: 1rem;
+                    height: 25px;
+                }
+                .btnEnvioForm{
+                    font-size: 1rem;
+                }
+                .linkReg{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    .footerIniciosesion{
+        ul{
+            gap: 10px;
+            a{
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    /*--------Estilos para la pagina registrarse.html para mobile-----*/
+    .mainRegistracion{
+        height: 75vh;
+        .divRegistracion{
+            width: 80%;
+            h1{
+                font-size: 2rem;
             }
             
         }
