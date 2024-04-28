@@ -12,6 +12,7 @@
     --secondary-color: rgb(24, 24, 24);
     --third-color: rgb(139, 34, 34);
     --fourth-color: radial-gradient(circle, #36b6d1, #2389b0, #225f8a, #20375f, #171334);
+    --boton-color: #01365c;
 }
 /*estilos de la pagina index*/
 /*estilos del body*/
@@ -76,7 +77,7 @@ hr{
                 transition: /*background-color 0.3s,*/ transform 0.3s;
             }
             .linkNav:hover{
-                background-color: var(--third-color);
+                background-color: var(--boton-color);
                 transform: scale(0.95);
             }
             .btnInicioSesion{
@@ -176,14 +177,45 @@ hr{
         justify-content: space-evenly;
         margin-bottom: 50px;
         gap: 40px;
-        div{
+        .pelicula{
             width: 250px;
             height: 350px;
+            min-width: 250px;
+            min-height: 350px;
+            position: relative;
+
+            &:hover{
+                transform: scale(0.9);           
+            }
+
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 10px;
+                box-shadow: 7px 10px 36px -13px rgba(247,247,247,0.6);
+            }
+            .tendencia{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(1, 16, 44, 0.842);
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: scale(0);
+                transition: 0.3s ease;
+                a{
+                    color: var(--main-color);
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                }
+            }
+            &:hover .tendencia{
+                transform: scale(1.1);
                 box-shadow: 7px 10px 36px -13px rgba(247,247,247,0.6);
             }
         }
@@ -256,7 +288,7 @@ hr{
     font-size: 1.2rem;
 }    
 
-/*---------------------estilos de la pagina iniciarsesion.html---------------------------------*/
+/*---------------------estilos de la pagina iniciarsesion.html----------------------------*/
 /*header la página, mismo que la de la pagina index*/
 /*estilos del main de la pagina iniciosesion.html*/
 .mainIniciosesion{
@@ -429,7 +461,7 @@ hr{
     scrollbar-color: #013f6b;
 }
 
-/*---------------Estilos de la pagina detalle.html--------------------------*/
+/*-------------Estilos de la pagina detalle.html----------------*/
 /*header y footer, los mismos que están en todas las demas paginas*/
 /*estilos del main de la pagina detalle.html*/
 .mainDetalle{
@@ -463,6 +495,10 @@ hr{
             }
             .divDetalleTitulo{
                 margin-bottom: 30px;
+                span{
+                    font-size: 1rem;
+                }
+                
             }            
             .divSinopsis{
                 margin-bottom: 30px;
@@ -545,7 +581,7 @@ hr{
     }
 }
 
-/*--------------------------Estilos para movil-------------------------------*/
+/*---------------------------------Estilos para movil--------------------------------*/
 @media screen and (max-width:768px){
     /*----estilos de la pagina index.html para movil----*/
     .header{
@@ -581,7 +617,7 @@ hr{
         height: 40vh;
         div{
             h2{
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
             .formBusqueda{
                 display: flex;
@@ -591,10 +627,10 @@ hr{
                 gap: 20px;
                 .txtBusqueda{
                     width: 400px;
-                    height: 3rem;
+                    height: 2.5rem;
                     /*margin-right: 15px;*/
                     border-radius: 20px;
-                    font-size: 1.3rem;
+                    font-size: 1.1rem;
                     border: none;
                     /*padding-left: 10px;*/
                 }
@@ -606,7 +642,15 @@ hr{
     }
     .peliculasTendencias{
         h2{
-            font-size: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+    .peliculasClasicos{
+        h2{
+            font-size: 1.5rem;
+        }
+        .galeriaClasicos{
+            column-gap: 15px;
         }
     }
     .footer{
@@ -661,7 +705,97 @@ hr{
             h1{
                 font-size: 2rem;
             }
-            
+            .formRegistracion{
+                .inputForm{
+                    font-size: 1rem;
+                }
+                .btnRegistracion{
+                    font-size: 1rem;
+                    height: 35px;
+                }
+                .linkHelp{
+                    font-size: 0.8rem;
+                }
+            }
         }
     }
+
+    /*----------Estilos de la pagina detalle.html para movil--------------------*/
+    .mainDetalle{
+        .sectionSup{
+            flex-direction: column;
+            .divImagen{
+                width: 250px;
+                height: 400px;
+                margin-top: 15px;
+            }
+            .divDetalle{
+                width: 80%;
+                justify-content: center;
+                margin-top: 10px;
+                h2{
+                    font-size: 1.3rem;
+                }
+                h3{
+                    font-size: 0.9rem;
+                }
+                h4{
+                    font-size: 0.7rem;
+                }
+                .divDetalleTitulo{
+                    span{
+                        font-size: 0.8rem;
+                    }
+                }
+                .divDetalleTitulo{
+                    margin-bottom: 15px;
+                }
+                .divSinopsis{
+                    margin-bottom: 15px;
+                }
+                .divReparto{
+                    font-size: 0.7rem;
+                }
+            }            
+        }
+        .sectionInf{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 50%;
+            }
+            .divTrailer{
+                width: 80%;
+                height: 50%;
+                h2{
+                    font-size: 0.9rem;
+                iframe{
+                    width: 100%;
+                    height: 40%;
+                    object-fit: cover;
+                }
+            }
+            .divInfo{
+                width: 80%;
+                height: 50%;
+                .divInfoDetalle{
+                    width: 70%;
+                    height: 50%;
+                    gap: 15px;
+                    h3{
+                        font: 0.8rem;
+                    }
+                    .tDatos{
+                        gap: 15px;
+                        font-size: 0.9rem;
+                    }
+                }
+                .divRedes{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
 }
