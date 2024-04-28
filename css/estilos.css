@@ -600,7 +600,7 @@ hr{
             .listNav{
                 margin-bottom: 10px;
                 a{
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                 }
             }
         }
@@ -762,17 +762,17 @@ hr{
                 justify-content: left;
                 margin-top: 10px;
                 h2{
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                 }
                 h3{
-                    font-size: 0.9rem;
+                    font-size: 0.8rem;
                 }
                 h4{
-                    font-size: 0.7rem;
+                    font-size: 0.6rem;
                 }
                 .divDetalleTitulo{
                     span{
-                        font-size: 0.8rem;
+                        font-size: 0.7rem;
                     }
                 }
                 .divDetalleTitulo{
@@ -782,7 +782,7 @@ hr{
                     margin-bottom: 15px;
                 }
                 .divReparto{
-                    font-size: 0.7rem;
+                    font-size: 0.6rem;
                     text-align: center;
                 }
             }            
@@ -830,7 +830,7 @@ hr{
                 }
                 .divRedes{
                     font-size: 0.8rem;
-                    gap: 20px;
+                    gap: 30px;
                 }
             }
         }
