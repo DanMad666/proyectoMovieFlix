@@ -587,7 +587,7 @@ hr{
 @media screen and (max-width:768px){
     /*----estilos de la pagina index.html para movil----*/
     .header{
-        height: 10vh;
+        height: 15vh;
         .navPrincipal{
             flex-direction: column;
             padding-top: 10px;
@@ -599,7 +599,7 @@ hr{
             }
             .listNav{
                 a{
-                    font-size: 0.7rem;
+                    font-size: 0.75rem;
                 }
             }
         }
@@ -658,23 +658,29 @@ hr{
             column-gap: 15px;
         }
     }
+
     .footer{
-        height: 10vh;
-        ul{
-            gap: 7px;
-            a{
-                font-size: 0.6rem;
+        height: 15vh;
+        nav{
+            ul{
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 10px;
+                a{
+                    font-size: 0.75rem;
+                }
             }
         }
         .flechaArriba{
             bottom: 50px;
             right: 0px;
-        }
+        }    
     }
+   
 
     /*----Estilos para la pagina iniciosesion.html para moviles-----*/
     .mainIniciosesion{
-        /*height: 75vh;*/
+        height: 70vh;
         .divIniciosesion{
             width: 80%;
             h1{
@@ -696,18 +702,22 @@ hr{
         }
     }
     .footerIniciosesion{
-        flex-direction: column;
-        ul{
-            gap: 7px;
-            a{
-                font-size: 0.6rem;
+        height: 15vh;
+        nav{
+            ul{
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 10px;
+                a{
+                    font-size: 0.8rem;
+                }
             }
         }
     }
 
     /*--------Estilos para la pagina registrarse.html para mobile-----*/
     .mainRegistracion{
-        /*height: 75vh;*/
+        height: 70vh;
         .divRegistracion{
             width: 80%;
             h1{
